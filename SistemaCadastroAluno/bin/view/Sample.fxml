@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="608.0" prefWidth="1090.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SampleController">
+   <children>
+      <Pane prefHeight="546.0" prefWidth="920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="1.0" prefHeight="115.0" prefWidth="920.0" stylesheets="@application.css">
+               <children>
+                  <ImageView fitHeight="101.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cadastro.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="SISTEMA PARA CADASTRO DE ALUNOS - UEFS">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="5.0" top="3.0" />
+               </padding>
+            </HBox>
+            <Line endX="1002.75" layoutX="86.0" layoutY="115.0" startX="-100.0" strokeWidth="3.0" />
+            <VBox layoutX="-6.0" layoutY="117.0" prefHeight="440.0" prefWidth="221.0" spacing="15.0" stylesheets="@application.css">
+               <children>
+                  <Button fx:id="btnNovoAluno" mnemonicParsing="false" onAction="#handleButtonAction" pickOnBounds="false" prefHeight="42.0" prefWidth="209.0" text="Cadastrar Aluno">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEditAluno" mnemonicParsing="false" onAction="#handleButtonAction" pickOnBounds="false" prefHeight="67.0" prefWidth="230.0" text="Editar Aluno">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRemoverAluno" mnemonicParsing="false" onAction="#handleButtonAction" pickOnBounds="false" prefHeight="67.0" prefWidth="230.0" text="Remover Aluno">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAtualizarAluno" mnemonicParsing="false" onAction="#handleButtonAction" pickOnBounds="false" prefHeight="67.0" prefWidth="230.0" text="Atualizar Lista de Alunos">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="12.0" top="5.0" />
+               </padding>
+            </VBox>
+            <TableView fx:id="tvAluno" layoutX="233.0" layoutY="118.0" prefHeight="491.0" prefWidth="857.0">
+              <columns>
+                <TableColumn fx:id="tcMatricula" prefWidth="91.0" text="Matricula" />
+                <TableColumn fx:id="tcNome" prefWidth="169.33334350585938" text="Aluno" />
+                  <TableColumn fx:id="tcNascimento" prefWidth="101.66668701171875" text="Nascimento" />
+                  <TableColumn fx:id="tcCpf" prefWidth="137.33331298828125" text="CPF" />
+                  <TableColumn fx:id="tcCurso" prefWidth="132.66668701171875" text="Curso" />
+                  <TableColumn fx:id="tcEmail" prefWidth="227.33331298828125" text="Email" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
