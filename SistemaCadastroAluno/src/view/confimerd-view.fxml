@@ -12,7 +12,7 @@
    <children>
       <Pane fx:id="confirmCadastro" prefHeight="522.0" prefWidth="438.0" style="-fx-background-color: #ffffff;" stylesheets="@application.css">
          <children>
-            <Button fx:id="btnConfIrmeRegister" layoutX="147.0" layoutY="444.0" mnemonicParsing="false" onAction="#clicouBtnConfirmeRegister" prefHeight="64.0" prefWidth="143.0" text="OK" textFill="WHITE" />
+            <Button fx:id="btnConfIrmeRegister" defaultButton="true" layoutX="147.0" layoutY="444.0" mnemonicParsing="false" onAction="#clicouBtnConfirmeRegister" prefHeight="64.0" prefWidth="143.0" text="OK" textFill="WHITE" />
             <Label layoutX="38.0" layoutY="50.0" text="Você foi Cadastrado com sucesso!">
                <font>
                   <Font size="24.0" />
