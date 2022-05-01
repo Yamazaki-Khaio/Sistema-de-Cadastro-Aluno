@@ -56,7 +56,7 @@
                         <Font size="22.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnAtualizarAluno" mnemonicParsing="false" onAction="#handleButtonAction" pickOnBounds="false" prefHeight="67.0" prefWidth="230.0" text="Atualizar Lista de Alunos">
+                  <Button fx:id="btnAtualizarAluno" mnemonicParsing="false" onAction="#handleButtonAction" pickOnBounds="false" prefHeight="67.0" prefWidth="230.0" text="Atualizar Lista">
                      <font>
                         <Font size="22.0" />
                      </font>

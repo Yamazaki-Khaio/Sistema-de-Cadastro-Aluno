@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 import model.Alunos;
 import model.AlunosDAO;
@@ -53,7 +54,7 @@ public class CadastroAlunoController implements Initializable {
     
     private boolean update = false;
     
-    
+    AudioClip ratinhoooo = new AudioClip(getClass().getResource("/view/ratinhooo.mp3").toExternalForm());
     
 
     
@@ -61,6 +62,7 @@ public class CadastroAlunoController implements Initializable {
     
     @FXML
     void userCadastro(ActionEvent event) {
+    	ratinhoooo.play();
     	if(nomeRegister.getText().isBlank() == false && cpfRegister.getText().isBlank() == false && emailRegister.getText().isBlank() == false 
     			&& matriculaRegister.getText().isBlank() == false && cursoRegister.getText().isBlank() == false ){
     		

@@ -18,6 +18,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.AudioClip;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Alunos;
@@ -71,8 +72,10 @@ public class SampleController implements Initializable {
    
    
     public static Stage pStage;
-  
-    
+    AudioClip dramatic = new AudioClip(getClass().getResource("/view/dramatic.swf.mp3").toExternalForm());
+    AudioClip pare = new AudioClip(getClass().getResource("/view/pare.mp3").toExternalForm());
+    AudioClip uepa = new AudioClip(getClass().getResource("/view/uepa-mp3cut.mp3").toExternalForm());
+    AudioClip rapaiiz = new AudioClip(getClass().getResource("/view/vinheta-xaropinho-rapaz_dx3f4Be.mp3").toExternalForm());
      public void showAsDialog(String fxml) {
         try {
             Parent parent = (Parent) FXMLLoader.load(this.getClass().getResource("/view/" + fxml + ".fxml"));
@@ -96,14 +99,20 @@ public class SampleController implements Initializable {
 	@FXML
     void handleButtonAction(ActionEvent event) {
     	if(event.getSource() == btnNovoAluno) {
+    		uepa.play();
     		showAsDialog("cadastroAluno-view");    	
     	
     	}else if(event.getSource() == btnEditAluno) {
-    		   alterarAlunos(); 	
+    		rapaiiz.play();
+    		alterarAlunos(); 	
 
     	}else if(event.getSource() == btnRemoverAluno) {
+    		pare.play();
     		deleteAlunos();
+    	
+    	
     	}else if(event.getSource() == btnAtualizarAluno) {
+    		dramatic.play();
     		listAlunos.clear();
     		carregarTela();
     	}

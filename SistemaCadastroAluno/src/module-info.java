@@ -5,6 +5,7 @@ module SistemaCadastroAluno {
 	requires java.sql;
 	requires javafx.web;
 	requires javafx.base;
+	requires javafx.media;
     
 	opens controllers to javafx.graphics, javafx.fxml, javafx.base;
 	opens model to javafx.graphics, javafx.fxml, javafx.base;
