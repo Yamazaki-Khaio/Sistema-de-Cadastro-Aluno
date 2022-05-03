@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="525.0" prefWidth="438.0" style="-fx-background-color: #808080;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastroAlunoController">
+<AnchorPane prefHeight="525.0" prefWidth="438.0" style="-fx-background-color: #808080;" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastroAlunoController">
    <children>
       <Pane layoutY="-7.0" prefHeight="61.0" prefWidth="438.0" style="-fx-background-color: #005eff;">
          <children>
@@ -21,7 +21,7 @@
             </Label>
             <ImageView fitHeight="64.0" fitWidth="64.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@cadastro.png" />
+                  <Image url="@../imagem/cadastro.png" />
                </image>
             </ImageView>
          </children>
@@ -71,6 +71,6 @@
          </font>
       </Label>
       <DatePicker fx:id="dateNascimento" layoutX="39.0" layoutY="419.0" prefHeight="36.0" prefWidth="348.0" promptText="DD/MM/YYYY" />
-      <Button fx:id="btnRegister" defaultButton="true" layoutX="151.0" layoutY="480.0" mnemonicParsing="false" onAction="#userCadastro" prefHeight="36.0" prefWidth="103.0" stylesheets="@application.css" text="Cadastro" />
+      <Button fx:id="btnRegister" defaultButton="true" layoutX="151.0" layoutY="480.0" mnemonicParsing="false" onAction="#userCadastro" prefHeight="36.0" prefWidth="103.0" stylesheets="@../css/application.css" text="Cadastro" />
    </children>
 </AnchorPane>

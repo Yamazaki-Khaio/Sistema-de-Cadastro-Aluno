@@ -8,19 +8,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastroConfirmerdController">
+<AnchorPane stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastroConfirmerdController">
    <children>
-      <Pane fx:id="confirmCadastro" prefHeight="522.0" prefWidth="438.0" style="-fx-background-color: #ffffff;" stylesheets="@application.css">
+      <Pane fx:id="confirmCadastro" prefHeight="385.0" prefWidth="438.0" style="-fx-background-color: #ffffff;">
          <children>
-            <Button fx:id="btnConfIrmeRegister" defaultButton="true" layoutX="147.0" layoutY="444.0" mnemonicParsing="false" onAction="#clicouBtnConfirmeRegister" prefHeight="64.0" prefWidth="143.0" text="OK" textFill="WHITE" />
-            <Label layoutX="38.0" layoutY="50.0" text="Você foi Cadastrado com sucesso!">
+            <Button fx:id="btnConfIrmeRegister" defaultButton="true" layoutX="150.0" layoutY="307.0" mnemonicParsing="false" onAction="#clicouBtnConfirmeRegister" prefHeight="64.0" prefWidth="143.0" text="OK" textFill="WHITE" />
+            <Label layoutX="38.0" layoutY="54.0" text="Você foi Cadastrado com sucesso!">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ImageView fitHeight="190.0" fitWidth="203.0" layoutX="120.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="115.0" fitWidth="123.0" layoutX="164.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@cadastro.png" />
+                  <Image url="@../imagem/cadastro.png" />
                </image>
             </ImageView>
          </children>

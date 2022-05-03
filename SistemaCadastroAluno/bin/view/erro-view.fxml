@@ -13,7 +13,7 @@
       <Pane fx:id="confirmCadastro" prefHeight="385.0" prefWidth="438.0" style="-fx-background-color: #ffffff;">
          <children>
             <Button fx:id="btnConfIrmeRegister" defaultButton="true" layoutX="150.0" layoutY="307.0" mnemonicParsing="false" onAction="#clicouBtnConfirmeRegister" prefHeight="64.0" prefWidth="143.0" text="OK" textFill="WHITE" />
-            <Label layoutX="38.0" layoutY="54.0" text="Você foi Cadastrado com sucesso!">
+            <Label layoutX="38.0" layoutY="54.0" text="Você não selecionou ninguém">
                <font>
                   <Font size="24.0" />
                </font>

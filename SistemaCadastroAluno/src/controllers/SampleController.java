@@ -7,15 +7,21 @@ import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.DialogPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.AudioClip;
@@ -37,8 +43,11 @@ public class SampleController implements Initializable {
     
     @FXML
     private Button btnAtualizarAluno;
-
-
+    
+    
+    @FXML
+    private TextField pesquisaField;
+    
     @FXML
     private Pane panePrincipal;
 
@@ -69,14 +78,17 @@ public class SampleController implements Initializable {
     private final AlunosDAO alunosDAO = new AlunosDAO();
     
     private ObservableList<Alunos> data;
+    
+    
    
    
     public static Stage pStage;
-    AudioClip dramatic = new AudioClip(getClass().getResource("/view/dramatic.swf.mp3").toExternalForm());
-    AudioClip pare = new AudioClip(getClass().getResource("/view/pare.mp3").toExternalForm());
-    AudioClip uepa = new AudioClip(getClass().getResource("/view/uepa-mp3cut.mp3").toExternalForm());
-    AudioClip rapaiiz = new AudioClip(getClass().getResource("/view/vinheta-xaropinho-rapaz_dx3f4Be.mp3").toExternalForm());
-     public void showAsDialog(String fxml) {
+    AudioClip dramatic = new AudioClip(getClass().getResource("/audio/dramatic.swf.mp3").toExternalForm());
+    AudioClip pare = new AudioClip(getClass().getResource("/audio/pare.mp3").toExternalForm());
+    AudioClip uepa = new AudioClip(getClass().getResource("/audio/uepa-mp3cut.mp3").toExternalForm());
+    AudioClip rapaiiz = new AudioClip(getClass().getResource("/audio/vinheta-xaropinho-rapaz_dx3f4Be.mp3").toExternalForm());
+ 
+    public void showAsDialog(String fxml) {
         try {
             Parent parent = (Parent) FXMLLoader.load(this.getClass().getResource("/view/" + fxml + ".fxml"));
             Stage stage = new Stage();
@@ -87,14 +99,17 @@ public class SampleController implements Initializable {
 			stage.setX(pStage.getX() + 50);
             stage.setY(pStage.getY() + 50);
             stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(fxml);
             stage.show();
         } catch (IOException var5) {
             var5.printStackTrace();
         }
 
     }
-    
-
+     
+      
+     
+     
 
 	@FXML
     void handleButtonAction(ActionEvent event) {
@@ -105,6 +120,7 @@ public class SampleController implements Initializable {
     	}else if(event.getSource() == btnEditAluno) {
     		rapaiiz.play();
     		alterarAlunos(); 	
+    		
 
     	}else if(event.getSource() == btnRemoverAluno) {
     		pare.play();
@@ -147,7 +163,7 @@ public class SampleController implements Initializable {
   			
   			
   			
-  	}
+  	}else showAsDialog("erro-view");
   	}
   	    
     public void deleteAlunos() {
@@ -177,10 +193,37 @@ public class SampleController implements Initializable {
         	tvAluno.setItems(data);
     		
     	}
+    
+   /* public void procurarAluno() {
+    	pesquisaField.setOnKeyReleased(e -> {
+    		if(pesquisaField.getText().equals("")) {
+    			carregarTela();
+    		}else {
+    			listAlunos.clear();
+    			String pesquisaTexto;
+    			pesquisaTexto = pesquisaField.getText();
+    			Alunos alunos = new Alunos();
+    			alunos.setMatricula(pesquisaTexto);
+    			alunosDAO.buscar(alunos); 
+    			
+    			
+    			
+    		}
+    		
+    		
+
+    	});
+    }*/
+
+   
       	
     
     
     public void initialize(URL url, ResourceBundle resoucerBundler) {
+    	
+    	//procurarAluno();
+    	
+
     	
     	carregarTela();
 

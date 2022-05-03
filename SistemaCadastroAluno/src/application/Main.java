@@ -23,7 +23,7 @@ public class Main extends Application {
         SampleController.pStage = stage;
         stage.setTitle("Sistema de Cadastro");
         stage.initStyle(StageStyle.DECORATED);
-        String css = this.getClass().getResource("/view/application.css").toExternalForm();
+        String css = this.getClass().getResource("/css/application.css").toExternalForm();
         sc.getStylesheets().add(css);
 
         root.setOnMousePressed(event -> {
