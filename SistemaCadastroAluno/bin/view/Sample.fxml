@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -52,22 +51,16 @@
                         <Font size="22.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnRemoverAluno" mnemonicParsing="false" onAction="#handleButtonAction" pickOnBounds="false" prefHeight="67.0" prefWidth="230.0" text="Remover Aluno">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Button>
                   <Button fx:id="btnAtualizarAluno" mnemonicParsing="false" onAction="#handleButtonAction" pickOnBounds="false" prefHeight="67.0" prefWidth="230.0" text="Atualizar Lista">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Button>
-                  <Label text="Pesquise Aluno(a)">
+                  <Button fx:id="btnRemoverAluno" mnemonicParsing="false" onAction="#handleButtonAction" pickOnBounds="false" prefHeight="67.0" prefWidth="230.0" text="Remover Aluno">
                      <font>
                         <Font size="22.0" />
                      </font>
-                  </Label>
-                  <TextField fx:id="pesquisaField" prefHeight="31.0" prefWidth="209.0" promptText="search" />
+                  </Button>
                </children>
                <padding>
                   <Insets left="12.0" top="5.0" />

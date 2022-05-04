@@ -63,46 +63,62 @@ public class CadastroAlunoController implements Initializable {
     @FXML
     void userCadastro(ActionEvent event) {
     	ratinhoooo.play();
-    	if(nomeRegister.getText().isBlank() == false && cpfRegister.getText().isBlank() == false && emailRegister.getText().isBlank() == false 
-    			&& matriculaRegister.getText().isBlank() == false && cursoRegister.getText().isBlank() == false ){
+    	if(nomeRegister.getText().isBlank() || nomeRegister.getText().isEmpty() != false){
     		
+    		lblAviso.setText("Adicione o Nome do Aluno");
     		
-            	String matricula, nome, cpf, email, dataNascimento, curso;
-            	
-            	matricula = matriculaRegister.getText();
-            	nome = nomeRegister.getText();
-            	cpf = cpfRegister.getText();        	
-            	email = emailRegister.getText();
-            	dataNascimento = dateNascimento.getValue().toString(); 
-            	curso = cursoRegister.getText();
-            	
-            	Alunos alunos = new Alunos();
-            	
-            	alunos.setMatricula(matricula);
-            	alunos.setNome(nome);
-            	alunos.setNascimento(dataNascimento);
-            	alunos.setCpf(cpf);
-            	alunos.setCurso(curso);
-            	alunos.setEmail(email);
-            	
-            	AlunosDAO alunosDAO = new AlunosDAO();         	
-            	if(update == false) {
-            		alunosDAO.registerAlunos(alunos);
-            	}else {
-            		alunosDAO.alterarAlunos(alunos);
-            	}
-            
-				
-                Stage stage = (Stage) btnRegister.getScene().getWindow();
-                stage.close();
-                
-                
+    	}else if (cpfRegister.getText().isBlank() || cpfRegister.getText().isEmpty() != false) {
+    		lblAviso.setText("Adicione o CPF do Aluno");
+    	
+    	}else if(matriculaRegister.getText().isBlank() || matriculaRegister.getText().isEmpty() != false ) {
+			lblAviso.setText("Adicione a Matricula do Aluno");	
+		
+    	}else if (emailRegister.getText().isBlank() || emailRegister.getText().isEmpty() != false) {
+			lblAviso.setText("Adicione o email do Aluno");
+			
+    		
+		}else if(cursoRegister.getText().isBlank() || cursoRegister.getText().isEmpty() != false) {
+			lblAviso.setText("Adicione o Curso do Aluno");
+			
+		}else if(dateNascimento.getValue().equals(null)) {
+			lblAviso.setText("Adicione a Data de Nascimento do Aluno");
+ 
+            	          
     		
     	} else {
-    		lblAviso.setText("Cadastre os dados do Aluno!");
+    		
+    		String matricula, nome, cpf, email, dataNascimento, curso;
+        	
+        	matricula = matriculaRegister.getText();
+        	nome = nomeRegister.getText();
+        	cpf = cpfRegister.getText();        	
+        	email = emailRegister.getText();
+        	dataNascimento = dateNascimento.getValue().toString(); 
+        	curso = cursoRegister.getText();
+        	
+        	Alunos alunos = new Alunos();
+        	
+        	alunos.setMatricula(matricula);
+        	alunos.setNome(nome);
+        	alunos.setNascimento(dataNascimento);
+        	alunos.setCpf(cpf);
+        	alunos.setCurso(curso);
+        	alunos.setEmail(email);
+        	
+        	AlunosDAO alunosDAO = new AlunosDAO();         	
+        	if(update == false) {
+        		alunosDAO.registerAlunos(alunos);
+        	}else {
+        		System.out.println(alunos.getNome());
+        		alunosDAO.alterarAlunos(alunos);
+        	}
+        
+			System.out.println(getUpdate());
+            Stage stage = (Stage) btnRegister.getScene().getWindow();
+            stage.close();
     	}
     		}
-        
+ 
 
 
     
@@ -111,10 +127,10 @@ public class CadastroAlunoController implements Initializable {
     }
 
 
-	public void setTextField(String matricula, String nome,String cpf, String curso, String email ) {
+	public void setTextField(String matricula, String nome, String cpf, String curso, String email) {
 		matriculaRegister.setText(matricula);
+		matriculaRegister.setEditable(false); 
 		nomeRegister.setText(nome);
-		
 		cpfRegister.setText(cpf);
 		cursoRegister.setText(curso);
 		emailRegister.setText(email);
@@ -122,12 +138,25 @@ public class CadastroAlunoController implements Initializable {
 		
 		
 		
+		
+		
 	}
  
-	void setUpdate(boolean b) {
+	public void setUpdate(boolean b) {
         this.update = b;
 
     }
+	
+	public boolean getUpdate() {
+		return update;
+	}
+	
+	
+
+
+
+
+
 
 
 }

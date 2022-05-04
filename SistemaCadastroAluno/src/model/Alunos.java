@@ -1,6 +1,5 @@
 package model;
 
-
 public class Alunos {
 	private String matricula;
 	private String nome;

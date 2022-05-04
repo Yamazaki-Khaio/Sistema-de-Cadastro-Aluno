@@ -12,7 +12,7 @@ public class AlunosDAO {
 	PreparedStatement pstm;
 	ResultSet rs;
 	List<Alunos> lista = new ArrayList<>();
-    
+	
 	
 	
 	
@@ -35,6 +35,7 @@ public class AlunosDAO {
         	
 
         }catch (Exception e){
+        	sampleController.showAsDialog("erro-view");
             e.printStackTrace();
             e.getCause();
             return false;
@@ -52,7 +53,7 @@ public class AlunosDAO {
 				Alunos alunos = new Alunos();
 				alunos.setMatricula(rs.getString("Matricula"));
 				alunos.setNome(rs.getString("Nome"));
-				alunos.setNascimento(rs.getString("Nascimento"));
+				alunos.setNascimento(rs.getString("Nascimento").toString());
 				alunos.setCpf(rs.getString("CPF"));
 				alunos.setCurso(rs.getString("Curso"));
 				alunos.setEmail(rs.getString("Email"));
@@ -68,24 +69,28 @@ public class AlunosDAO {
     	return lista;
     }
    
-   public boolean alterarAlunos(Alunos alunos) {
-	   String insertFields = "UPDATE sis_alunos_db.alunos SET Nome = ?, Nascimento = ?, CPF = ?, Curso = ?, Email = ? WHERE Matricula = ?";
+   public void alterarAlunos(Alunos alunos) {
+	   String atualizarFields = "UPDATE sis_alunos_db.alunos SET Nome = ?, Nascimento = ?, CPF = ?, Curso = ?, Email = ? WHERE Matricula = ?";
+	   SampleController sampleController = new SampleController();
 	   conn = new ConnectionUtil().getConnection();
 	   try {
-		   pstm = conn.prepareStatement(insertFields);
+		   pstm = conn.prepareStatement(atualizarFields);
 		   pstm.setString(1, alunos.getNome());
 		   pstm.setString(2, alunos.getNascimento());
 		   pstm.setString(3, alunos.getCpf());
 		   pstm.setString(4, alunos.getCurso());
 		   pstm.setString(5, alunos.getEmail());
 		   pstm.setString(6, alunos.getMatricula());
+		   sampleController.showAsDialog("confimerd-view");
 		   pstm.execute();
-		   pstm.close();   
-		   return true;
+		   pstm.close();
+		   
+		   
 	} catch (Exception e) {
+		sampleController.showAsDialog("erro-view");
 		e.printStackTrace();
         e.getCause();
-        return false;
+        
 	}
    }
    
