@@ -78,10 +78,10 @@ public class SampleController implements Initializable {
    
    
     public static Stage pStage;
-    AudioClip dramatic = new AudioClip(getClass().getResource("/audio/dramatic.swf.mp3").toExternalForm());
-    AudioClip pare = new AudioClip(getClass().getResource("/audio/pare.mp3").toExternalForm());
-    AudioClip uepa = new AudioClip(getClass().getResource("/audio/uepa-mp3cut.mp3").toExternalForm());
-    AudioClip rapaiiz = new AudioClip(getClass().getResource("/audio/vinheta-xaropinho-rapaz_dx3f4Be.mp3").toExternalForm());
+   // AudioClip dramatic = new AudioClip(getClass().getResource("/audio/dramatic.swf.mp3").toExternalForm());
+   // AudioClip pare = new AudioClip(getClass().getResource("/audio/pare.mp3").toExternalForm());
+   // AudioClip uepa = new AudioClip(getClass().getResource("/audio/uepa-mp3cut.mp3").toExternalForm());
+  //  AudioClip rapaiiz = new AudioClip(getClass().getResource("/audio/vinheta-xaropinho-rapaz_dx3f4Be.mp3").toExternalForm());
  
     public void showAsDialog(String fxml) {
         try {
@@ -109,21 +109,21 @@ public class SampleController implements Initializable {
 	@FXML
     void handleButtonAction(ActionEvent event) {
     	if(event.getSource() == btnNovoAluno) {
-    		uepa.play();
+    	//	uepa.play();
     		showAsDialog("cadastroAluno-view");    	
     	
     	}else if(event.getSource() == btnEditAluno) {
-    		rapaiiz.play();
+    		//rapaiiz.play();
     		alterarAlunos(); 	
     		
 
     	}else if(event.getSource() == btnRemoverAluno) {
-    		pare.play();
+    		//pare.play();
     		deleteAlunos();
     	
     	
     	}else if(event.getSource() == btnAtualizarAluno) {
-    		dramatic.play();
+    		//dramatic.play();
     		listAlunos.clear();
     		carregarTela();
     	}

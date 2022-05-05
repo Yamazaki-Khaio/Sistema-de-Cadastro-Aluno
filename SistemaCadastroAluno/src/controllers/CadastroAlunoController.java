@@ -54,7 +54,7 @@ public class CadastroAlunoController implements Initializable {
     
     private boolean update = false;
     
-    AudioClip ratinhoooo = new AudioClip(getClass().getResource("/audio/ratinhooo.mp3").toExternalForm());
+   // AudioClip ratinhoooo = new AudioClip(getClass().getResource("/audio/ratinhooo.mp3").toExternalForm());
     
 
     
@@ -62,7 +62,7 @@ public class CadastroAlunoController implements Initializable {
     
     @FXML
     void userCadastro(ActionEvent event) {
-    	ratinhoooo.play();
+    //	ratinhoooo.play();
     	if(nomeRegister.getText().isBlank() || nomeRegister.getText().isEmpty() != false){
     		
     		lblAviso.setText("Adicione o Nome do Aluno");
