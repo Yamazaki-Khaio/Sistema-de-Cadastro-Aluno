@@ -8,9 +8,9 @@ public class ConnectionUtil {
     public Connection getConnection() {
     	
         String databaseName = "sis_alunos_db";
-        String databaseUser = "root";
-        String databasePassword = "34450660K@i";
-        String url = "jdbc:mysql://localhost:3306/" + databaseName;
+        String databaseUser = "yamazaki-server";
+        String databasePassword = "283127BCK@";
+        String url = "jdbc:mysql://127.0.0.1:3306/" + databaseName;
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
