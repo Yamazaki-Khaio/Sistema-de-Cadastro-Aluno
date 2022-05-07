@@ -78,10 +78,10 @@ public class SampleController implements Initializable {
    
    
     public static Stage pStage;
-   // AudioClip dramatic = new AudioClip(getClass().getResource("/audio/dramatic.swf.mp3").toExternalForm());
-   // AudioClip pare = new AudioClip(getClass().getResource("/audio/pare.mp3").toExternalForm());
-   // AudioClip uepa = new AudioClip(getClass().getResource("/audio/uepa-mp3cut.mp3").toExternalForm());
-  //  AudioClip rapaiiz = new AudioClip(getClass().getResource("/audio/vinheta-xaropinho-rapaz_dx3f4Be.mp3").toExternalForm());
+   // AudioClip dramatic = new AudioClip(getClass().getResource("/view/audio/dramatic.swf.mp3").toExternalForm());
+   // AudioClip pare = new AudioClip(getClass().getResource("/view/audio/pare.mp3").toExternalForm());
+   // AudioClip uepa = new AudioClip(getClass().getResource("/view/audio/uepa-mp3cut.mp3").toExternalForm());
+  //  AudioClip rapaiiz = new AudioClip(getClass().getResource("/view/audio/vinheta-xaropinho-rapaz_dx3f4Be.mp3").toExternalForm());
  
     public void showAsDialog(String fxml) {
         try {

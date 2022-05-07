@@ -54,7 +54,7 @@ public class CadastroAlunoController implements Initializable {
     
     private boolean update = false;
     
-   // AudioClip ratinhoooo = new AudioClip(getClass().getResource("/audio/ratinhooo.mp3").toExternalForm());
+   // AudioClip ratinhoooo = new AudioClip(getClass().getResource("/view/audio/ratinhooo.mp3").toExternalForm());
     
 
     

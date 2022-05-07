@@ -8,7 +8,7 @@ import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 
 public class CadastroConfirmerdController {
-   // AudioClip cavalo = new AudioClip(getClass().getResource("/audio/cavalo.mp3").toExternalForm());
+   // AudioClip cavalo = new AudioClip(getClass().getResource("/view/audio/cavalo.mp3").toExternalForm());
 
     @FXML
     private Button btnConfIrmeRegister;

@@ -8,7 +8,7 @@ public class ConnectionUtil {
     public Connection getConnection() {
     	
         String databaseName = "sis_alunos_db";
-        String databaseUser = "yamazaki-server";
+        String databaseUser = "root";
         String databasePassword = "283127BCK@";
         String url = "jdbc:mysql://127.0.0.1:3306/" + databaseName;
         

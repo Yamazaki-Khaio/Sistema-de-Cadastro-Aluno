@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="608.0" prefWidth="1090.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SampleController">
+<AnchorPane prefHeight="608.0" prefWidth="1090.0" stylesheets="@css/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SampleController">
    <children>
       <Pane prefHeight="546.0" prefWidth="920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -22,7 +22,7 @@
                <children>
                   <ImageView fitHeight="101.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../imagem/cadastro.png" />
+                        <Image url="@imagem/cadastro.png" />
                      </image>
                      <HBox.margin>
                         <Insets />

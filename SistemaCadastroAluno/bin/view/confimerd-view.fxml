@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastroConfirmerdController">
+<AnchorPane stylesheets="@css/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastroConfirmerdController">
    <children>
       <Pane fx:id="confirmCadastro" prefHeight="385.0" prefWidth="438.0" style="-fx-background-color: #ffffff;">
          <children>
@@ -20,7 +20,7 @@
             </Label>
             <ImageView fitHeight="115.0" fitWidth="123.0" layoutX="164.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagem/cadastro.png" />
+                  <Image url="@imagem/cadastro.png" />
                </image>
             </ImageView>
          </children>
