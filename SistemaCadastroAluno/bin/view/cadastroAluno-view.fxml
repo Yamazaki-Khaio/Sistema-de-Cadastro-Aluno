@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="525.0" prefWidth="438.0" style="-fx-background-color: #808080;" stylesheets="@css/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastroAlunoController">
+<AnchorPane prefHeight="525.0" prefWidth="438.0" style="-fx-background-color: #808080;" stylesheets="@css/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastroAlunoController">
    <children>
       <Pane layoutY="-7.0" prefHeight="61.0" prefWidth="438.0" style="-fx-background-color: #005eff;">
          <children>
@@ -35,24 +35,24 @@
             </Label>
          </children>
       </Pane>
-      <Label layoutX="43.0" layoutY="70.0" text="Nome Completo">
+      <Label layoutX="43.0" layoutY="70.0" text="Matricula">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="nomeRegister" accessibleRoleDescription="Int" layoutX="39.0" layoutY="90.0" prefHeight="36.0" prefWidth="348.0" promptText="Name" />
+      <TextField fx:id="matriculaRegister" accessibleRoleDescription="Int" layoutX="39.0" layoutY="90.0" prefHeight="36.0" prefWidth="348.0" promptText="Matricula" />
       <Label layoutX="43.0" layoutY="140.0" text="Cpf">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
       <TextField fx:id="cpfRegister" accessibleRoleDescription="Int" layoutX="39.0" layoutY="160.0" prefHeight="36.0" prefWidth="348.0" promptText="CPF" />
-      <Label layoutX="43.0" layoutY="210.0" text="Matricula">
+      <Label layoutX="43.0" layoutY="210.0" text="Nome">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="matriculaRegister" accessibleRoleDescription="Int" layoutX="39.0" layoutY="230.0" prefHeight="36.0" prefWidth="348.0" promptText="Matricula" />
+      <TextField fx:id="nomeRegister" accessibleRoleDescription="Int" layoutX="39.0" layoutY="230.0" prefHeight="36.0" prefWidth="348.0" promptText="Nome" />
       <Label layoutX="43.0" layoutY="275.0" text="Email">
          <font>
             <Font size="14.0" />

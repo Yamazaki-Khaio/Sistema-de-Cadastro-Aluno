@@ -155,7 +155,7 @@ public class SampleController implements Initializable {
   			
   			stage.toFront();
   			stage.show();
-  			System.out.println(cadastroAlunoController.getUpdate()); 
+  			
   			  			
   			
   	}

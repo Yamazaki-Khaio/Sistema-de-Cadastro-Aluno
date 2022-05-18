@@ -63,15 +63,15 @@ public class CadastroAlunoController implements Initializable {
     @FXML
     void userCadastro(ActionEvent event) {
     //	ratinhoooo.play();
-    	if(nomeRegister.getText().isBlank() || nomeRegister.getText().isEmpty() != false){
-    		
-    		lblAviso.setText("Adicione o Nome do Aluno");
+    	if(matriculaRegister.getText().isBlank() || matriculaRegister.getText().isEmpty() != false ) {
+    		lblAviso.setText("Adicione a Matricula do Aluno");
     		
     	}else if (cpfRegister.getText().isBlank() || cpfRegister.getText().isEmpty() != false) {
     		lblAviso.setText("Adicione o CPF do Aluno");
     	
-    	}else if(matriculaRegister.getText().isBlank() || matriculaRegister.getText().isEmpty() != false ) {
-			lblAviso.setText("Adicione a Matricula do Aluno");	
+    	}else if(nomeRegister.getText().isBlank() || nomeRegister.getText().isEmpty() != false){
+    		
+    		lblAviso.setText("Adicione o Nome do Aluno");
 		
     	}else if (emailRegister.getText().isBlank() || emailRegister.getText().isEmpty() != false) {
 			lblAviso.setText("Adicione o email do Aluno");
@@ -109,7 +109,6 @@ public class CadastroAlunoController implements Initializable {
         	if(update == false) {
         		alunosDAO.registerAlunos(alunos);
         	}else {
-        		System.out.println(alunos.getNome());
         		alunosDAO.alterarAlunos(alunos);
         	}
         

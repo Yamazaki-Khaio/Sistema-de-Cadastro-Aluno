@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -22,10 +23,14 @@ public class Main extends Application {
         Scene sc = new Scene(root);
         SampleController.pStage = stage;
         stage.setTitle("Sistema de Cadastro");
+        Image icon = new Image(getClass().getResourceAsStream("/view/imagem/cadastro.png"));
+        stage.getIcons().add(icon);
         stage.initStyle(StageStyle.DECORATED);
         String css = this.getClass().getResource("/view/css/application.css").toExternalForm();
         sc.getStylesheets().add(css);
-
+        
+        
+        
         root.setOnMousePressed(event -> {
             x = event.getSceneX();
             y = event.getSceneY();
